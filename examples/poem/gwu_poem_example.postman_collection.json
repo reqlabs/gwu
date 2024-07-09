@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "afcadf7c-1c2f-45fa-8f2d-8551a0e9e2af",
+		"name": "Gwu Poem Example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36315005"
+	},
+	"item": [
+		{
+			"name": "Example Get Poem By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/poem/isjzB57elf",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"poem",
+						"isjzB57elf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Example Get Poems By Author",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/poems/author/Goethe",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"poems",
+						"author",
+						"Goethe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Example Get Poems",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/poems",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"poems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Example Create Poem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Der Zauberlehrling\",\r\n    \"author\": \"Goethe\",\r\n    \"text\": \"Hat der alte Hexenmeister\\nsich doch einmal wegbegeben!\\nUnd nun sollen seine Geister\\nauch nach meinem Willen leben.\\nSeine Wort' und Werke\\nMerkt ich und den Brauch,\\nund mit Geistesstärke\\ntu ich Wunder auch.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/poem",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"poem"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
