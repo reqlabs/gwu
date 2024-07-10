@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.0] - 2024-07-09
+## [1.0.0] - 2024-07-11
 
 ### Added
 
@@ -18,5 +18,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Example implementation: In-Memory Poem Store with JSON API.
 - Postman collection for testing the example API.
 
-[unreleased]: https://github.com/yourusername/gwu/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/yourusername/gwu/releases/tag/v1.0.0
+[unreleased]: https://github.com/reqlabs/gwu/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/reqlabs/gwu/releases/tag/v1.0.0

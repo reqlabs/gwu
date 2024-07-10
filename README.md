@@ -1,5 +1,5 @@
 # Gwu
-Gwu (Generic/Go Web Utility, pronounced "guu-uuh") is a simple web utility for GoLang, designed with generics (Go >=1.18). Gwu is utility-like: simple, concise, and helpful. Most importantly, Gwu is **std-compliant**.
+Gwu (Generic/Go Web Utility, pronounced "guu-uuh") is a simple web utility for GoLang, designed with generics (Go >=1.18). Gwu is utility-like: simple, concise, and helpful. Most importantly, Gwu is **std-compliant** and with **0 dependencies**.
 
 Gwu does not bloat your project or enforce any framework on you. Instead, it provides simple functionality that helps you focus on important parts and reduce boilerplate code.
 
