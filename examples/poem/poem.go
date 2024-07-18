@@ -49,6 +49,9 @@ func main() {
 	mux.Handle("GET /poems/author/{author}", gwu.Handle(gwu.PathVal("author"), ctrl.ByAuthor,
 		gwu.Log(log.With("method", "GET", "route", "/poems/author/{author}"))),
 	)
+	mux.Handle("DELETE /poem/{id}", gwu.Handle(IDIn("id"), ctrl.Delete,
+		gwu.Log(log.With("method", "DELETE", "route", "/poem/{id}"))),
+	)
 
 	server := http.Server{Addr: ":8080", Handler: mux}
 
@@ -162,6 +165,20 @@ func (s *Store) All() []Poem {
 	return poems
 }
 
+func (s *Store) Delete(id ID) error {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	_, exists := s.poems[id]
+	if !exists {
+		return errNotFound
+	}
+
+	delete(s.poems, id)
+
+	return nil
+}
+
 type PoemController struct {
 	store *Store
 }
@@ -200,6 +217,16 @@ func (c *PoemController) ByAuthor(_ context.Context, author string, opts gwu.Han
 	}
 
 	return poems, http.StatusOK, nil
+}
+
+func (c *PoemController) Delete(_ context.Context, id ID, opts gwu.HandleOpts) (string, int, error) {
+	err := c.store.Delete(id)
+	if err != nil {
+		opts.Log.Debug("could not delete poem", "id", id, "error", err)
+		return string(id), http.StatusNotFound, ErrNotFound
+	}
+
+	return string(id), http.StatusOK, nil
 }
 
 func (s *Store) mock() {

@@ -89,6 +89,25 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Example Delete Poem",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/poem/1234567890",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"poem",
+						"1234567890"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
