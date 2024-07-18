@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/jensilo/gwu/gwu"
+	"github.com/jensilo/gwu"
 	"log/slog"
 	"math/rand"
 	"net/http"
