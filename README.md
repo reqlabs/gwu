@@ -5,7 +5,7 @@ Gwu does not bloat your project or enforce any framework on you. Instead, it pro
 
 Gwu is open to growth and contributions. Fork the project, add/modify/remove code, and open a PR. I look forward to your ideas and improvements.
 
-I’m committed to keeping Gwu simple and pragmatic. For more information, see the [corresponding blog post](https://blog.ioutil.app).
+I’m committed to keeping Gwu simple and pragmatic. For more information, see the [corresponding blog post](https://blog.ioutil.app/posts/introducing-gwu/).
 
 # Usage
 `gwu.Handle` returns a standard `http.Handler`. Here’s a minimal example of how to use `gwu.Handle`:
